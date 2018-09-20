@@ -32,7 +32,8 @@
                     Margin="20,0,0,0"
                                                 />
         </StackPanel>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1"
+                    Margin="20">
             <GridView x:ConnectionId='4' Name="main_gridview"
                       IsItemClickEnabled="True"
                                                   
