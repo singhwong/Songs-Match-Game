@@ -12,7 +12,7 @@
 
     <Grid Name="main_grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
@@ -25,8 +25,15 @@
                          Foreground="SkyBlue"/>
             <MediaElement Name="main_mediaElement"
                           AutoPlay="True"/>
+            <Button Name="refresh_button"
+                    FontSize="30"
+                    Content="Refresh"         
+                    Background="White"
+                    Margin="20,0,0,0"
+                    Click="refresh_button_Click"/>
         </StackPanel>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1"
+                    Margin="20">
             <GridView Name="main_gridview"
                       IsItemClickEnabled="True"
                       ItemsSource="{x:Bind Songs}"

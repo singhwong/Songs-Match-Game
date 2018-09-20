@@ -59,6 +59,14 @@
       <RootProperty Name="Name" />
       <RootProperty Name="AutoPlay" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="SongsMatchGame.MainPage" />
   </Roots.RootTypes>
 </Roots>

@@ -109,7 +109,12 @@ namespace SongsMatchGame
 
         }
 
-        private async void Page_Loaded_1(object sender, RoutedEventArgs e)
+        private void Page_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            UseMethod();
+        }
+
+        private async void UseMethod()
         {
             main_progressdRing.IsActive = true;
 
@@ -121,6 +126,10 @@ namespace SongsMatchGame
             await GameSongs(randomsongs);
 
             main_progressdRing.IsActive = false;
+        }
+        private void refresh_button_Click(object sender, RoutedEventArgs e)
+        {
+            UseMethod();
         }
     }
 }

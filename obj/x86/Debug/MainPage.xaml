@@ -12,7 +12,7 @@
 
     <Grid x:ConnectionId='2' Name="main_grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
@@ -25,6 +25,12 @@
                          Foreground="SkyBlue"/>
             <MediaElement x:ConnectionId='7' Name="main_mediaElement"
                           AutoPlay="True"/>
+            <Button x:ConnectionId='8' Name="refresh_button"
+                    FontSize="30"
+                    Content="Refresh"         
+                    Background="White"
+                    Margin="20,0,0,0"
+                                                />
         </StackPanel>
         <StackPanel Grid.Row="1">
             <GridView x:ConnectionId='4' Name="main_gridview"
@@ -33,9 +39,9 @@
                                                          >
                 <GridView.ItemTemplate>
                     <DataTemplate                       >
-                        <Image x:ConnectionId='5' Height="100"
-                               Width="100"
-                               Margin="10"
+                        <Image x:ConnectionId='5' Height="130"
+                               Width="130"
+                               Margin="3"
                                                            />
                     </DataTemplate>
                 </GridView.ItemTemplate>
