@@ -40,8 +40,8 @@
                       ItemClick="main_gridview_ItemClick">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Song">
-                        <Image Height="130"
-                               Width="130"
+                        <Image Height="75"
+                               Width="75"
                                Margin="3"
                                Source="{x:Bind AlbumCover}"/>
                     </DataTemplate>

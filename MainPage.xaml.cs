@@ -86,8 +86,7 @@ namespace SongsMatchGame
                 StorageItemThumbnail current_Thumb = await song.GetThumbnailAsync(
                     ThumbnailMode.MusicView,
                     200,
-                    ThumbnailOptions.UseCurrentScale
-                    );
+                    ThumbnailOptions.UseCurrentScale);
                 BitmapImage Album_Cover = new BitmapImage();
                 Album_Cover.SetSource(current_Thumb);
 

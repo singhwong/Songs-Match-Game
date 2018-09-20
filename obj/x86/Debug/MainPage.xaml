@@ -40,8 +40,8 @@
                                                          >
                 <GridView.ItemTemplate>
                     <DataTemplate                       >
-                        <Image x:ConnectionId='5' Height="130"
-                               Width="130"
+                        <Image x:ConnectionId='5' Height="75"
+                               Width="75"
                                Margin="3"
                                                            />
                     </DataTemplate>
