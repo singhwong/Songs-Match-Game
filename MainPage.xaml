@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="SongsMatchGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SongsMatchGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:SongsMatchGame.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded_1">
+
+    <Grid Name="main_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <ProgressBar Name="main_progressbar"
+                         Maximum="100"
+                         Minimum="0"
+                         Value="100"
+                         Height="30"
+                         Margin="20"
+                         Foreground="SkyBlue"/>
+            <MediaElement Name="main_mediaElement"
+                          AutoPlay="True"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <GridView Name="main_gridview"
+                      IsItemClickEnabled="True"
+                      ItemsSource="{x:Bind Songs}"
+                      ItemClick="main_gridview_ItemClick">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:Song">
+                        <Image Height="130"
+                               Width="130"
+                               Margin="3"
+                               Source="{x:Bind AlbumCover}"/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </StackPanel>
+        <ProgressRing Name="main_progressdRing"
+                      Grid.Row="1"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Foreground="Blue"
+                      Height="100"
+                      Width="100"/>
+    </Grid>
+</Page>
