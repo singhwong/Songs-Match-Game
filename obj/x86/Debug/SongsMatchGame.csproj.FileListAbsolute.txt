@@ -217,4 +217,3 @@ C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\MultipleQualifiersP
 C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\SongsMatchGame.csprojAssemblyReference.cache

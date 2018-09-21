@@ -16,6 +16,7 @@ namespace SongsMatchGame.Models
         public string Album { get; set; }
         public StorageFile SongFile { get; set; }
         public bool Selected { get; set; }
-        public BitmapImage AlbumCover;
+        public BitmapImage AlbumCover { get; set; }
+        public bool Used { get; set; }
     }
 }

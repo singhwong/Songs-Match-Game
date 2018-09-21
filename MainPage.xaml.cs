@@ -10,6 +10,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,6 +31,8 @@ namespace SongsMatchGame
     {
         private ObservableCollection<StorageFile> AllSongs;
         private ObservableCollection<Song> Songs;
+        private bool musicPlay_bool = false;
+        private int num = 1;
         public MainPage()
         {
             this.InitializeComponent();
@@ -97,7 +100,7 @@ namespace SongsMatchGame
                 newsongs.Album = song_Properties.Album;
                 newsongs.AlbumCover = Album_Cover;
                 newsongs.SongFile = song;
-
+                newsongs.Used = false;
                 Songs.Add(newsongs);
                 id++;
             }
@@ -105,12 +108,21 @@ namespace SongsMatchGame
 
         private void main_gridview_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            num++;
+           
+            if (num<11)
+            {
+                WaitingStart();
+                main_mediaElement.Stop();
+                var songs = (Song)e.ClickedItem;
+                songs.Used = true;
+            }
         }
 
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             UseMethod();
+           
         }
 
         private async void UseMethod()
@@ -123,12 +135,65 @@ namespace SongsMatchGame
             Songs.Clear();
             var randomsongs = await GetRandomSongs(AllSongs);
             await GameSongs(randomsongs);
-
+            WaitingStart();
             main_progressdRing.IsActive = false;
         }
         private void refresh_button_Click(object sender, RoutedEventArgs e)
         {
             UseMethod();
+            num = 1;
+        }
+
+        private void main_storyBoard_Completed(object sender, object e)
+        {
+            if (musicPlay_bool)
+            {
+                main_mediaElement.Stop();
+                num++;
+                if (num<11)
+                {
+                    WaitingStart();
+                }
+                else
+                {
+                    reminder_textblock.Text = "Game Over";
+                }                   
+            }
+            else
+            {
+                    StartGuessing();
+                    GetPlaySong();               
+            }
+        }
+        private void WaitingStart()
+        {
+            musicPlay_bool = false;
+            SolidColorBrush color = new SolidColorBrush(Colors.LightBlue);
+            main_progressbar.Foreground = color;
+            reminder_textblock.Foreground = color;
+            reminder_textblock.Text = $"Get ready for round {num}...";
+            main_storyBoard.Begin();
+        }
+        private void StartGuessing()
+        {
+            musicPlay_bool = true;
+            SolidColorBrush color = new SolidColorBrush(Colors.Red);
+            main_progressbar.Foreground = color;
+            reminder_textblock.Foreground = color;
+            reminder_textblock.Text = "Beginning Guessing...";
+            main_storyBoard.Begin();
+        }
+        private async void GetPlaySong()
+        {
+            Random rd = new Random();
+            var unUsedSongs = Songs.Where(p => p.Used == false);
+            int index = rd.Next(unUsedSongs.Count());
+            var thisRandomSong = unUsedSongs.ElementAt(index);
+            thisRandomSong.Selected = true;
+
+            main_mediaElement.SetSource(await thisRandomSong.SongFile.OpenAsync(FileAccessMode.Read),
+                thisRandomSong.SongFile.ContentType);
+            thisRandomSong.Used = true;
         }
     }
 }

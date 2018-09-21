@@ -9,23 +9,55 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                           >
-
-    <Grid x:ConnectionId='2' Name="main_grid">
+    <Page.Resources>
+        <Storyboard x:ConnectionId='2' x:Name="main_storyBoard"                                      >
+            <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True"
+                                           Storyboard.TargetName="main_progressbar"
+                                           Storyboard.TargetProperty="(RangeBase.Value)">
+                <DiscreteDoubleKeyFrame KeyTime="0"
+                                        Value="100"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="90"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:2"
+                                        Value="80"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3"
+                                        Value="70"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:4"
+                                        Value="60"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:5"
+                                        Value="50"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:6"
+                                        Value="40"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:7"
+                                        Value="30"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:8"
+                                        Value="20"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:9"
+                                        Value="10"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:10"
+                                        Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:ConnectionId='3' Name="main_grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <ProgressBar x:ConnectionId='6' Name="main_progressbar"
+            <ProgressBar x:ConnectionId='7' Name="main_progressbar"
                          Maximum="100"
                          Minimum="0"
                          Value="100"
                          Height="30"
                          Margin="20"
                          Foreground="SkyBlue"/>
-            <MediaElement x:ConnectionId='7' Name="main_mediaElement"
+            <TextBlock x:ConnectionId='8' Name="reminder_textblock"
+                       FontSize="30"
+                       Margin="20,10,0,10"/>
+            <MediaElement x:ConnectionId='9' Name="main_mediaElement"
                           AutoPlay="True"/>
-            <Button x:ConnectionId='8' Name="refresh_button"
+            <Button x:ConnectionId='10' Name="refresh_button"
                     FontSize="30"
                     Content="Refresh"         
                     Background="White"
@@ -34,13 +66,13 @@
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Margin="20">
-            <GridView x:ConnectionId='4' Name="main_gridview"
+            <GridView x:ConnectionId='5' Name="main_gridview"
                       IsItemClickEnabled="True"
                                                   
                                                          >
                 <GridView.ItemTemplate>
                     <DataTemplate                       >
-                        <Image x:ConnectionId='5' Height="75"
+                        <Image x:ConnectionId='6' Height="75"
                                Width="75"
                                Margin="3"
                                                            />
@@ -48,7 +80,7 @@
                 </GridView.ItemTemplate>
             </GridView>
         </StackPanel>
-        <ProgressRing x:ConnectionId='3' Name="main_progressdRing"
+        <ProgressRing x:ConnectionId='4' Name="main_progressdRing"
                       Grid.Row="1"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"

@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T09:55:46.450</Modified>
+      <Modified>2018-09-21T03:43:19.396</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\SongsMatchGame.exe">
       <PackagePath>entrypoint\SongsMatchGame.exe</PackagePath>
-      <Modified>2018-09-20T09:55:45.696</Modified>
+      <Modified>2018-09-21T03:43:18.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -570,15 +570,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\SongsMatchGame.xr.xml">
       <PackagePath>SongsMatchGame.xr.xml</PackagePath>
-      <Modified>2018-09-20T09:55:45.111</Modified>
+      <Modified>2018-09-21T02:33:59.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-20T09:55:45.216</Modified>
+      <Modified>2018-09-21T03:43:18.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-20T09:55:45.216</Modified>
+      <Modified>2018-09-21T03:43:18.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -587,11 +587,11 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:51:17.435</Modified>
+      <Modified>2018-09-21T00:44:59.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\SongsMatchGame.exe">
       <PackagePath>SongsMatchGame.exe</PackagePath>
-      <Modified>2018-09-20T09:55:46.445</Modified>
+      <Modified>2018-09-21T03:43:19.386</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
