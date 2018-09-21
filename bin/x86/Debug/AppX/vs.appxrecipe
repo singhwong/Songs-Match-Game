@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T03:43:19.396</Modified>
+      <Modified>2018-09-21T09:20:12.977</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\SongsMatchGame.exe">
       <PackagePath>entrypoint\SongsMatchGame.exe</PackagePath>
-      <Modified>2018-09-21T03:43:18.855</Modified>
+      <Modified>2018-09-21T09:20:11.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,15 +495,30 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T15:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-09-21T09:18:10.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-09-21T09:18:10.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-09-21T09:18:10.452</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:44:27.457</Modified>
+      <Modified>2018-09-21T09:18:10.452</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:44:27.457</Modified>
+      <Modified>2018-09-21T09:09:17.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
@@ -513,7 +528,7 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:39:05.398</Modified>
+      <Modified>2018-09-21T09:09:17.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square71x71Logo.scale-150.png">
       <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
@@ -537,7 +552,7 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-21T09:18:10.452</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -547,12 +562,12 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:39:05.398</Modified>
+      <Modified>2018-09-21T09:09:17.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-20T08:39:05.398</Modified>
+      <Modified>2018-09-21T09:09:17.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -574,11 +589,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-21T03:43:18.608</Modified>
+      <Modified>2018-09-21T09:20:11.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-21T03:43:18.609</Modified>
+      <Modified>2018-09-21T09:20:11.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -587,11 +602,11 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T00:44:59.543</Modified>
+      <Modified>2018-09-21T09:20:12.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\SongsMatchGame.exe">
       <PackagePath>SongsMatchGame.exe</PackagePath>
-      <Modified>2018-09-21T03:43:19.386</Modified>
+      <Modified>2018-09-21T09:20:12.968</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
