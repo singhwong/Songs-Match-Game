@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:SongsMatchGame.Models"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                           >
@@ -43,26 +44,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <ProgressBar x:ConnectionId='7' Name="main_progressbar"
+            <ProgressBar x:ConnectionId='12' Name="main_progressbar"
                          Maximum="100"
                          Minimum="0"
                          Value="100"
                          Height="30"
                          Margin="20"
                          Foreground="SkyBlue"/>
-            <TextBlock x:ConnectionId='8' Name="reminder_textblock"
+            <TextBlock x:ConnectionId='13' Name="reminder_textblock"
                        FontSize="30"
-                       Margin="20,10,0,10"/>
-            <MediaElement x:ConnectionId='9' Name="main_mediaElement"
+                       HorizontalAlignment="Center"/>
+            <MediaElement x:ConnectionId='14' Name="main_mediaElement"
                           AutoPlay="True"/>
-            <Button x:ConnectionId='10' Name="refresh_button"
-                    FontSize="30"
-                    Content="Refresh"         
-                    Background="White"
-                    Margin="20,0,0,0"
-                                                />
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Margin="20">
@@ -72,16 +68,38 @@
                                                          >
                 <GridView.ItemTemplate>
                     <DataTemplate                       >
-                        <Image x:ConnectionId='6' Height="75"
+                        <Image x:ConnectionId='11' Height="75"
                                Width="75"
                                Margin="3"
                                                            />
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+            <TextBlock x:ConnectionId='6' Name="score_textlbock"
+                       FontSize="15"/>
+            <TextBlock x:ConnectionId='7' Name="title_textlbock"
+                       FontSize="15"/>
+            <TextBlock x:ConnectionId='8' Name="artist_textlbock"
+                       FontSize="15"/>
+            <TextBlock x:ConnectionId='9' Name="album_textlbock"
+                       FontSize="15"/>
+            <Button x:ConnectionId='10' Name="refresh_button"
+                    FontSize="30"
+                    Content="Start"         
+                    Background="White"
+                    HorizontalAlignment="Center"
+                                                />
         </StackPanel>
+        <UI:AdControl ApplicationId="9n0zsjzv6nqf"
+ 		              AdUnitId="1100032250"
+                      Grid.Row="2"
+ 		              HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,10"
+ 		              Width="300"
+ 		              Height="100"/>
         <ProgressRing x:ConnectionId='4' Name="main_progressdRing"
-                      Grid.Row="1"
+                      Grid.RowSpan="3"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
                       Foreground="Blue"

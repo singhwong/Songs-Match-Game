@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:SongsMatchGame.Models"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded_1">
@@ -43,6 +44,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
             <ProgressBar Name="main_progressbar"
@@ -54,15 +56,9 @@
                          Foreground="SkyBlue"/>
             <TextBlock Name="reminder_textblock"
                        FontSize="30"
-                       Margin="20,10,0,10"/>
+                       HorizontalAlignment="Center"/>
             <MediaElement Name="main_mediaElement"
                           AutoPlay="True"/>
-            <Button Name="refresh_button"
-                    FontSize="30"
-                    Content="Refresh"         
-                    Background="White"
-                    Margin="20,0,0,0"
-                    Click="refresh_button_Click"/>
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Margin="20">
@@ -79,9 +75,31 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+            <TextBlock Name="score_textlbock"
+                       FontSize="15"/>
+            <TextBlock Name="title_textlbock"
+                       FontSize="15"/>
+            <TextBlock Name="artist_textlbock"
+                       FontSize="15"/>
+            <TextBlock Name="album_textlbock"
+                       FontSize="15"/>
+            <Button Name="refresh_button"
+                    FontSize="30"
+                    Content="Start"         
+                    Background="White"
+                    HorizontalAlignment="Center"
+                    Click="refresh_button_Click"/>
         </StackPanel>
+        <UI:AdControl ApplicationId="9n0zsjzv6nqf"
+ 		              AdUnitId="1100032250"
+                      Grid.Row="2"
+ 		              HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,10"
+ 		              Width="300"
+ 		              Height="100"/>
         <ProgressRing Name="main_progressdRing"
-                      Grid.Row="1"
+                      Grid.RowSpan="3"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
                       Foreground="Blue"

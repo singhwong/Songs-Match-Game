@@ -1,4 +1,5 @@
-﻿using SongsMatchGame.Models;
+﻿using Microsoft.Advertising.WinRT.UI;
+using SongsMatchGame.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -33,10 +34,21 @@ namespace SongsMatchGame
         private ObservableCollection<Song> Songs;
         private bool musicPlay_bool = false;
         private int num = 1;
+        private int total_score;
+        private int score;
+
+        InterstitialAd myInterstitialAd = null;
+        string myAppId = "d25517cb-12d4-4699-8bdc-52040c712cab";
+        string myAdUnitId = "test";
         public MainPage()
         {
             this.InitializeComponent();
             Songs = new ObservableCollection<Song>();
+            myInterstitialAd = new InterstitialAd();
+            myInterstitialAd.AdReady += MyInterstitialAd_AdReady;
+            myInterstitialAd.ErrorOccurred += MyInterstitialAd_ErrorOccurred;
+            myInterstitialAd.Completed += MyInterstitialAd_Completed;
+            myInterstitialAd.Cancelled += MyInterstitialAd_Cancelled;
         }
 
         private async Task GetAllSongs(ObservableCollection<StorageFile> list, StorageFolder folder)
@@ -55,7 +67,7 @@ namespace SongsMatchGame
         }
         private async Task<List<StorageFile>> GetRandomSongs(ObservableCollection<StorageFile> allsongs)
         {
-            
+
             Random songRd = new Random();
             List<StorageFile> listsongs = new List<StorageFile>();
             var allsongsCount = allsongs.Count;
@@ -106,23 +118,63 @@ namespace SongsMatchGame
             }
         }
 
-        private void main_gridview_ItemClick(object sender, ItemClickEventArgs e)
+        private async void main_gridview_ItemClick(object sender, ItemClickEventArgs e)
         {
-            num++;
-           
-            if (num<11)
+            if (musicPlay_bool == false) return;
+            main_mediaElement.Stop();
+            main_storyBoard.Pause();
+            var click_songs = (Song)e.ClickedItem;
+            Uri uri;
+            if (click_songs.Selected)
             {
-                WaitingStart();
-                main_mediaElement.Stop();
-                var songs = (Song)e.ClickedItem;
-                songs.Used = true;
-            }
-        }
+                uri = new Uri("ms-appx:///Assets/correct.png");
+                score = (int)main_progressbar.Value;
 
+            }
+            else
+            {
+                uri = new Uri("ms-appx:///Assets/incorrect.png");
+                score = (int)main_progressbar.Value * -1;
+            }
+            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(uri);
+            var file_stream = await file.OpenAsync(FileAccessMode.Read);
+            await click_songs.AlbumCover.SetSourceAsync(file_stream);
+            ClickSameMethod();
+            click_songs.Used = true;
+
+        }
+        private void ClickSameMethod()
+        {
+            total_score += score;
+            var correct_song = Songs.FirstOrDefault(p => p.Selected == true);
+            score_textlbock.Text = $"The score: {score}, Total score: {total_score} after {num} rounds";
+            title_textlbock.Text = $"Correct song Title: {correct_song.Title}";
+            artist_textlbock.Text = $"Correct song Artist: {correct_song.Artist}";
+            album_textlbock.Text = $"Correct song Album: {correct_song.Album}";
+            if (num < 5)
+            {
+                num++;
+                WaitingStart();
+            }
+            else
+            {
+                reminder_textblock.Text = "Game Over";
+                main_storyBoard.Pause();
+                refresh_button.Visibility = Visibility.Visible;
+            }
+            if (num == 5)
+            {
+                myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
+            }
+            correct_song.Used = true;
+            correct_song.Selected = false;
+        }
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
+            main_progressbar.Visibility = Visibility.Collapsed;
             UseMethod();
-           
+            refresh_button.Visibility = Visibility.Collapsed;
+
         }
 
         private async void UseMethod()
@@ -137,32 +189,66 @@ namespace SongsMatchGame
             await GameSongs(randomsongs);
             WaitingStart();
             main_progressdRing.IsActive = false;
+            main_progressbar.Visibility = Visibility.Visible;
         }
         private void refresh_button_Click(object sender, RoutedEventArgs e)
         {
-            UseMethod();
-            num = 1;
+            if (InterstitialAdState.Ready == myInterstitialAd.State)
+            {
+                myInterstitialAd.Show();
+            }
         }
 
+        async void MyInterstitialAd_AdReady(object sender, object e)
+        {
+            // Your code goes here.
+            //ContentDialog content = new ContentDialog
+            //{
+            //    Title = "error",
+            //    Content = "Please wait seconds",
+            //    IsPrimaryButtonEnabled = true,
+            //    PrimaryButtonText = "OK",
+            //};
+            //ContentDialogResult value = await content.ShowAsync();
+        }
+
+        void MyInterstitialAd_ErrorOccurred(object sender, AdErrorEventArgs e)
+        {
+            // Your code goes here.
+        }
+
+        void MyInterstitialAd_Completed(object sender, object e)
+        {
+            // Your code goes here.
+            reminder_textblock.Text = "";
+            main_progressbar.Visibility = Visibility.Collapsed;
+            refresh_button.Visibility = Visibility.Collapsed;
+            UseMethod();
+            num = 1;
+            total_score = 0;
+            score_textlbock.Text = "";
+            title_textlbock.Text = "";
+            artist_textlbock.Text = "";
+            album_textlbock.Text = "";
+        }
+
+        void MyInterstitialAd_Cancelled(object sender, object e)
+        {
+            // Your code goes here.
+            myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
+        }
         private void main_storyBoard_Completed(object sender, object e)
         {
             if (musicPlay_bool)
             {
+                score = -100;
                 main_mediaElement.Stop();
-                num++;
-                if (num<11)
-                {
-                    WaitingStart();
-                }
-                else
-                {
-                    reminder_textblock.Text = "Game Over";
-                }                   
+                ClickSameMethod();
             }
             else
             {
-                    StartGuessing();
-                    GetPlaySong();               
+                StartGuessing();
+                GetPlaySong();
             }
         }
         private void WaitingStart()
