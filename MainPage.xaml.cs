@@ -162,19 +162,12 @@ namespace SongsMatchGame
                 main_storyBoard.Pause();
                 refresh_button.Visibility = Visibility.Visible;
             }
-            if (num == 5)
-            {
-                myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
-            }
             correct_song.Used = true;
             correct_song.Selected = false;
         }
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             main_progressbar.Visibility = Visibility.Collapsed;
-            UseMethod();
-            refresh_button.Visibility = Visibility.Collapsed;
-
         }
 
         private async void UseMethod()
@@ -193,6 +186,7 @@ namespace SongsMatchGame
         }
         private void refresh_button_Click(object sender, RoutedEventArgs e)
         {
+            myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
             if (InterstitialAdState.Ready == myInterstitialAd.State)
             {
                 myInterstitialAd.Show();
@@ -201,15 +195,15 @@ namespace SongsMatchGame
 
         async void MyInterstitialAd_AdReady(object sender, object e)
         {
-            // Your code goes here.
-            //ContentDialog content = new ContentDialog
-            //{
-            //    Title = "error",
-            //    Content = "Please wait seconds",
-            //    IsPrimaryButtonEnabled = true,
-            //    PrimaryButtonText = "OK",
-            //};
-            //ContentDialogResult value = await content.ShowAsync();
+            //Your code goes here.
+            ContentDialog content = new ContentDialog
+            {
+                Title = "Error",
+                Content = "Please wait a few seconds",
+                IsPrimaryButtonEnabled = true,
+                PrimaryButtonText = "OK",
+            };
+            ContentDialogResult value = await content.ShowAsync();
         }
 
         void MyInterstitialAd_ErrorOccurred(object sender, AdErrorEventArgs e)
@@ -235,7 +229,7 @@ namespace SongsMatchGame
         void MyInterstitialAd_Cancelled(object sender, object e)
         {
             // Your code goes here.
-            myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
+            //myInterstitialAd.RequestAd(AdType.Video, myAppId, myAdUnitId);
         }
         private void main_storyBoard_Completed(object sender, object e)
         {

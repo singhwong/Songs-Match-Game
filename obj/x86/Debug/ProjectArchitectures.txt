@@ -1,1 +1,1 @@
-C:\Users\wang\source\repos\App1\SongsMatchGame\SongsMatchGame.csproj;x86
+C:\Users\wang\source\repos\UWP-Songs-Match-Game\SongsMatchGame.csproj;x86

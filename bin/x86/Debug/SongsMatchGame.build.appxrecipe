@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>70e93aa4-d088-4436-9ed1-074622e0a65d</PackageIdentityName>
     <PackageIdentityPublisher>CN=wang</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\wang\source\repos\App1\SongsMatchGame\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\wang\source\repos\UWP-Songs-Match-Game\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\SongsMatchGame.exe">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\SongsMatchGame.exe">
       <PackagePath>entrypoint\SongsMatchGame.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -370,89 +370,89 @@
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\correct.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\correct.png">
       <PackagePath>Assets\correct.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\incorrect.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\incorrect.png">
       <PackagePath>Assets\incorrect.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square71x71Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square71x71Logo.scale-150.png">
       <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square71x71Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square71x71Logo.scale-200.png">
       <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square71x71Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square71x71Logo.scale-400.png">
       <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\SongsMatchGame.xr.xml">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\SongsMatchGame.xr.xml">
       <PackagePath>SongsMatchGame.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
@@ -461,11 +461,11 @@
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\SongsMatchGame\bin\x86\Debug\Core\SongsMatchGame.exe">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Songs-Match-Game\bin\x86\Debug\Core\SongsMatchGame.exe">
       <PackagePath>SongsMatchGame.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

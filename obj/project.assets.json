@@ -27506,11 +27506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wang\\source\\repos\\App1\\SongsMatchGame\\SongsMatchGame.csproj",
+      "projectUniqueName": "C:\\Users\\wang\\source\\repos\\UWP-Songs-Match-Game\\SongsMatchGame.csproj",
       "projectName": "SongsMatchGame",
-      "projectPath": "C:\\Users\\wang\\source\\repos\\App1\\SongsMatchGame\\SongsMatchGame.csproj",
+      "projectPath": "C:\\Users\\wang\\source\\repos\\UWP-Songs-Match-Game\\SongsMatchGame.csproj",
       "packagesPath": "C:\\Users\\wang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wang\\source\\repos\\App1\\SongsMatchGame\\obj\\",
+      "outputPath": "C:\\Users\\wang\\source\\repos\\UWP-Songs-Match-Game\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
